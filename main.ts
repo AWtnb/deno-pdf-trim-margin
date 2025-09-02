@@ -84,7 +84,7 @@ const trimMargin = async (
     outDoc.addPage(page);
   });
   const bytes = await outDoc.save();
-  const outPath = withSuffix(path, "_cropmargin");
+  const outPath = withSuffix(path, "_trimmargin");
   await Deno.writeFile(outPath, bytes);
   return 0;
 };
